@@ -13,7 +13,6 @@ def menu():
 # Takes in a password in string format containing only integers. Encodes by converting each digit in the password to an
 # integer, adding 3, then converting the digit back to a string. Each digit is added to the variable "encoded", which
 # stores the final encoded password.
-
 def encode():
     original = input("Please enter your password to encode: ")
     encoded = ""
@@ -25,6 +24,9 @@ def encode():
 def decode(encoded):
     pass
 
+# On program start, prints the menu and gets the first menu selection. For option 1, calls the encode function, then
+# displays the menu. For option 2, calls the decode function, then displays the menu. If the user selects option 3,
+# the program is terminated.
 def main():
     menu_selection = menu()
     while True:
