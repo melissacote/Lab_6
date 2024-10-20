@@ -1,3 +1,4 @@
+# Melissa Cote
 
 # Prints the menu and prompts user for menu selection.
 def menu():
