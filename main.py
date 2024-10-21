@@ -11,9 +11,9 @@ def menu():
     choice = int(input("Please enter an option: "))
     return choice
 
-# Takes in a password in string format containing only integers. Encodes by converting each digit in the password to an
-# integer, adding 3, then converting the digit back to a string. Each digit is added to the variable "encoded", which
-# stores the final encoded password.
+#  Prompts user to input password, then loops through each digit. Changes the digit to an integer and adds 3. If the new
+#  digit is greater than 9, subtracts 10 to account for encoded values that are greater than 10 when increased by 3.
+#  Each new digit is then changed to a string and added to the encoded string, which is returned when completed.
 def encode():
     original = input("Please enter your password to encode: ")
     encoded = ""
