@@ -18,7 +18,10 @@ def encode():
     original = input("Please enter your password to encode: ")
     encoded = ""
     for digit in original:
-        encoded += str(int(digit) + 3)
+        temp_digit = int(digit) + 3
+        if temp_digit > 9:
+            temp_digit -= 10
+        encoded += str(temp_digit)
     print("Your password has been encoded and stored!")
     return encoded
 
