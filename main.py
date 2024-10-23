@@ -26,7 +26,18 @@ def encode():
     return encoded
 
 def decode(encoded):
-    pass
+    decoded = ""
+    # goes through each char in string
+    for char in encoded:
+        # subtracts 3 to decode
+        newVal = int(char) - 3
+        # wraparound check
+        if newVal < 0:
+            newVal += 10
+        # adds char to decoded string
+        decoded += str(newVal)
+    print("The encoded password is " + encoded + ", and the original password is " + decoded + ".")
+    return decoded
 
 # On program start, prints the menu and gets the first menu selection. For option 1, calls the encode function, then
 # displays the menu. For option 2, calls the decode function, then displays the menu. If the user selects option 3,
